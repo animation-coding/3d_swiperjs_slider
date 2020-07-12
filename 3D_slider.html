@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Slider</title>
+<!--====Swiper.js====-->  
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<style>
+*
+{
+   margin: 0;
+   padding: 0;
+}   
+body {
+   background: #000;
+   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+   font-size: 14px;
+   color: #000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+}
+
+.swiper-container {
+   width: 100%;
+   padding-top: 50px;
+   padding-bottom: 50px;
+}
+
+.swiper-slide {
+   background-position: center;
+   background-size: cover;
+   width: 300px;
+   height: 300px;
+
+}
+img
+{
+   width: 100%;
+   -webkit-box-reflect: below 1px linear-gradient(transparent,transparent, #0005);
+}
+.id
+{
+   color: #fff;
+   font-size: 20px;
+}
+
+
+ </style>
+</head>
+<body>
+    
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="pic/01.jpg"></div>
+      <div class="swiper-slide"><img src="pic/09.jpg"></div>
+      <div class="swiper-slide"><img src="pic/03.jpg"></div>
+      <div class="swiper-slide"><img src="pic/04.jpg"></div>
+      <div class="swiper-slide"><img src="pic/05.jpg"></div>
+      <div class="swiper-slide"><img src="pic/06.jpg"></div>
+      <div class="swiper-slide"><img src="pic/07.jpg"></div>
+      <div class="swiper-slide"><img src="pic/08.jpg"></div>
+      <div class="swiper-slide"><img src="pic/02.jpg"></div>
+      <div class="swiper-slide"><img src="pic/10.jpg"></div>
+      <div class="swiper-slide"><img src="pic/11.jpg"></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next id"></div>
+    <div class="swiper-button-prev id"></div>
+  </div>
+
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+   var swiper = new Swiper('.swiper-container', 
+   {
+     effect: 'coverflow',
+     grabCursor: true,
+     centeredSlides: true,
+     slidesPerView: 'auto',
+     coverflowEffect: {
+       rotate: 20,
+       stretch: 0,
+       depth: 200,
+       modifier: 1,
+       slideShadows: true,
+     },
+     loop:true,
+     autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+   });
+ </script>
+</body>
+</html>
